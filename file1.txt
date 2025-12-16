@@ -1,0 +1,38 @@
+1️⃣ Method Name
+    Brute Force Approach
+
+2️⃣ What is it?
+    Brute Force means:
+        Try all possible solutions and check the condition directly until you find the answer.
+        There is no optimization, no shortcuts — just correctness.
+
+Technically:
+    Uses nested loops
+    Checks every combination
+    Guarantees correct result
+
+3️⃣ Why it is used?
+    Brute Force is used because:
+    It is the simplest way to solve a problem
+    Helps understand problem requirements
+    Acts as a baseline solution
+
+    Interviewers want to see your thinking process first
+👉 Every optimized solution starts from brute force.
+
+4️⃣ When it is used?
+Use Brute Force when:
+    Input size is small
+    You want to validate logic
+    You are learning a new problem
+    In interviews, as the first explanation
+
+Avoid when:
+    Input size is large
+    Performance is critical
+
+5️⃣ Time & Space Complexity
+Time Complexity:
+    Usually O(n²) (because of nested loops)
+Space Complexity:
+    Usually O(1) (no extra memory)

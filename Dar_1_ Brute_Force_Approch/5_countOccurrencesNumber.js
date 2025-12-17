@@ -11,3 +11,13 @@ function countOccurrence(arr, x) {
 
 let arr = [1, 2, 1, 2, 1, 1, 1, 2, 3, 4, 55, 6, 7, 1, 1];
 console.log(countOccurrence(arr, 1)); // 7 (i coming in 7 times)
+
+
+// or
+// function countOccurrences(arr, x) {
+//   let count = 0;
+//   for (let n of arr) {
+//     if (n === x) count++;
+//   }
+//   return count;
+// }

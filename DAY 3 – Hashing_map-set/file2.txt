@@ -1,0 +1,40 @@
+1️⃣ Method Name
+  Hashing (using Map / Set in JavaScript)
+
+2️⃣ What is Hashing?
+ Store data in key–value form so that lookup, insert, and delete operations are very fast.
+
+In JavaScript:
+  Map → key–value pairs
+  Set → unique values only
+  Object → also key–value, but Map is preferred in interviews
+
+3️⃣ Why is Hashing used?
+  Hashing is used to:
+  Remove nested loops
+  Avoid repeated comparisons
+  Optimize O(n²) → O(n)
+
+Interviewers love hashing because it shows:
+  Optimization mindset
+  Proper data structure choice
+  Clean JavaScript knowledge
+
+4️⃣ When should you use Hashing?
+  Use Hashing when:
+  You need fast lookup
+  You are checking duplicates
+  You are counting frequency
+  You need to remember previous elements
+
+Do NOT use hashing when:
+  Memory is extremely limited
+  Order is the only concern (sometimes arrays are better)
+
+5️⃣ Time & Space Complexity
+  Time Complexity: O(n)
+  Space Complexity: O(n)
+
+Map vs Object=>
+  “I prefer Map over Object for hashing because
+  it supports any key type and has predictable performance.”

@@ -6,6 +6,7 @@
 
 // get map indexes
 arr=[2,7,11,15];
+const map=new Map();
 map.get(2);  // 0
 map.get(7);  // 1
 map.get(11); // 2

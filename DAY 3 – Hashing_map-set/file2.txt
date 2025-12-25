@@ -76,5 +76,4 @@ Time: O(1) (average)
 
   ✅ With hashing:
   You type name → direct access
-
   That “direct access” is hashing.

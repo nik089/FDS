@@ -1,0 +1,43 @@
+1️⃣ Method Name
+  Sliding Window Technique
+
+2️⃣ What is Sliding Window? (Simple Definition)
+  Sliding Window is a technique where:
+
+  We maintain a “window” (subarray / substring) and move it step by step instead of recalculating everything again.
+
+Instead of:
+  Recomputing sums/counts for every subarray (brute force)
+
+We:
+Reuse previous computation
+  Slide the window forward
+
+3️⃣ Why is Sliding Window Used?
+Because brute force solutions often do this:
+for i
+  for j
+    calculate again
+
+⏱ Time: O(n²)
+  Sliding Window converts this to:
+
+4️⃣ When Should You Use Sliding Window?
+  Use Sliding Window when the problem has:
+  Subarray
+  Substring
+  Continuous elements
+  Window size (k)
+  Maximum / minimum / sum / count
+❌ Do NOT use when elements are not continuous.
+
+
+5️⃣ Types of Sliding Window
+  1️⃣ Fixed Size Window
+  Window size = k
+
+Example: max sum of subarray of size k
+
+2️⃣ Variable Size Window
+  Window size changes dynamically
+Example: longest substring without repeating characters

@@ -15,3 +15,23 @@ function groupAnagrams(arr) {
 let arr = ["eat","tea","tan","ate","nat","bat"]
 console.log(groupAnagrams(arr));
 // Output: [["eat","tea","ate"],["tan","nat"],["bat"]]
+
+
+
+//through object
+function groupAnagrams(arr) {
+  const obj = {};
+  for (let w of arr) {
+    const key = w.split("").sort().join("");
+
+    if (!obj[key]) obj[key] = [];
+
+    obj[key].push(w);
+  }
+
+  return Object.values(obj)
+}
+
+
+let arr1 = ["eat","tea","tan","ate","nat","bat"]
+console.log(groupAnagrams(arr1))

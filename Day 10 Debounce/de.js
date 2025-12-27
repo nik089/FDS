@@ -54,5 +54,17 @@ const debouncedSearch = debounce(searchAPI, 500);
 console.log(debouncedSearch());
 
 
+// c      a      t
+// |------|------|
+// timer reset every time
+
+// STOP typing
+// |-----500ms-----| → API Called 
+
+
+
+
+
+
 
 

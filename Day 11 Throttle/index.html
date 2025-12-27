@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Throttle Example</title>
+  <style>
+    body {
+      height: 2000px;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>Throttle Example (Scroll)</h3>
+  <p>Scroll down and check console</p>
+
+  <script>
+    function throttle(fn, time) {
+      let canRun = true;
+
+      return function () {
+        if (!canRun) return;
+
+        fn();
+        canRun = false;
+
+        setTimeout(() => {
+          canRun = true;
+        }, time);
+      };
+    }
+
+    function onScroll() {
+      console.log("SCROLL EVENT HANDLED");
+    }
+
+    const throttledScroll = throttle(onScroll, 1000);
+
+    window.addEventListener("scroll", throttledScroll);
+  </script>
+
+</body>
+</html>

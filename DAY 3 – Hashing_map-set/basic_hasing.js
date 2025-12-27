@@ -103,3 +103,125 @@ console.log(Object.keys(myObject).length); // 1
 // | Anagram check            | Map         |
 // | Subarray sum             | Map         |
 // | Caching                  | Map         |
+
+
+
+//Object
+// let user1 = {
+//   name: "Amit",
+//   address: { city: "Delhi" }
+// };
+// let user2 = user1 ;
+// user2.address.city = "Noida";
+// console.log(user1.address.city);//Noida
+
+// expalination:
+// 1️⃣ Case: let user2 = user1
+    // let user1 = { name: "Amit", address: { city: "Delhi" } };
+    // let user2 = user1; 
+
+    // Memory model
+    //             Memory:
+    //             📦 Object at 1001 → { name: "Amit", address: 3001 }
+    //             📦 Object at 3001 → { city: "Delhi" }
+
+    //             Pointers:
+    //             user1 → 1001
+    //             user2 → 1001 ← both point to the same object
+    //             When you run:
+    //             user2.address.city = "Noida"; 
+                    // You update the object at address 3001. Since both variables reference the same place, 
+                    // you see the change through both.
+    // result: console.log(user1.address.city); // "Noida"
+
+
+// 2️⃣ Case: let user2 = { ...user1 };
+    let user1 = { name: "Amit", address: { city: "Delhi" } };   
+    let user2 = { ...user1 }; // Shallow copy
+    user2.address.city = "Noida";
+    console.log(user1.address.city); // "Noida"
+    // Memory model
+    //             📦 Object at 1001 → { name: "Amit", address: 3001 }
+    //             📦 Object at 2001 → { name: "Amit", address: 3001 } (new object)
+    //             📦 Object at 3001 → { city: "Delhi" 
+    //             Pointers:
+    //             user1 → 1001
+    //             user2 → 2001
+    //             Both user1 and user2 have their own objects (1001 and 2001), but the address property in both points to the same nested object at 3001.
+    //             When you run:
+    //             user2.address.city = "Noida";
+                    // You update the object at address 3001. Since user1.address also points to this same object, you see the change through both.
+    // result: console.log(user1.address.city); // "Noida"  
+    // To avoid this, a deep copy is needed:
+    // let user3 = JSON.parse(JSON.stringify(user1)); // Deep copy
+    // user3.address.city = "Mumbai";
+    
+    // console.log(user1.address.city); // "Noida"
+    
+    // console.log(user3.address.city); // "Mumbai"
+
+
+let a = { x: 1 };
+let b = { x: 1 };
+
+console.log(a == b);   // false
+console.log(a === b);  // false
+// Explanation:
+// In JavaScript, objects are compared by reference, not by their content. 
+// Even though both a and b have the same structure and values, they are two distinct objects in memory. 
+// Therefore, both a == b and a === b evaluate to false because they do not reference the same object.
+
+// Memroy Model:
+//             📦 Object at 1001 → { x: 1 }
+//             📦 Object at 2001 → { x: 1 }
+//             Pointers:
+//             a → 1001
+//             b → 2001
+
+// =================================================================
+// delete vs undefined
+// let obj = { name: "Amit" };
+
+// obj.name = undefined;
+        // Explanation:
+            // Property still exists
+            // Value is undefined
+// console.log(obj); // { name: undefined }
+
+// delete obj.name;
+// console.log(obj); // {}
+
+
+// Interview Point
+// undefined → property exists
+// delete → property removed
+
+
+// =============================================================
+// 11️⃣ Deep Copy Using Recursion (Advanced Interview)
+function deepCopy(obj) {
+  if (obj === null || typeof obj !== "object") {
+    return obj;
+  }
+
+  let copy = Array.isArray(obj) ? [] : {};
+
+  for (let key in obj) {
+    copy[key] = deepCopy(obj[key]);
+  }
+
+  return copy;
+}
+// Example usage:
+let original = {
+  name: "Amit",
+  address: { city: "Delhi", coordinates: { lat: 28.6139, long: 77.209 } }
+};  
+let copied = deepCopy(original);
+copied.address.city = "Noida";
+console.log(original.address.city); // "Delhi"
+console.log(copied.address.city);   // "Noida"
+// Explanation:
+// The deepCopy function recursively copies all nested objects and arrays, ensuring that changes to the copied object do not affect the original.
+    
+        

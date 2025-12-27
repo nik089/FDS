@@ -17,7 +17,7 @@ function maxSubarraySum(arr, target){
 
 let arr = [2, 1, 5, 1, 3, 2];
 let target = 3;
-console.log(maxSubarraySum(arr,target))
+console.log(maxSubarraySum(arr,target)) // 9
 
 
 

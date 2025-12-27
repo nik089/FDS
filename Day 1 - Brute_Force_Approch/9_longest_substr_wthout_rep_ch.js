@@ -15,7 +15,7 @@ function longestSubstringBrute(str){
 }
 
 let Input = "abcabcdbcbb";
-console.log(longestSubstringBrute(Input))
+console.log(longestSubstringBrute(Input)) //
 
 
 // | Start Index | Substring Checked | Stop Reason | Length |

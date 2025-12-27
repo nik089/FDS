@@ -1,3 +1,14 @@
+1. What is the Sliding Window Technique?
+    The Sliding Window technique is an optimization strategy used to process contiguous
+    subarrays or substrings efficiently by maintaining a “window” that moves over the data instead
+    of recalculating values repeatedly.
+
+Instead of recalculating from scratch for every possible subarray, you:
+Expand the window by adding elements
+Shrink the window by removing elements
+Maintain relevant state (sum, count, frequency, max, min)
+===================================================================
+
 1️⃣ Method Name
   Sliding Window Technique
 
@@ -36,8 +47,67 @@ for i
   1️⃣ Fixed Size Window
   Window size = k
 
+        Add new element (right)
+        Remove old element (left)
+        Move both pointers forward
+
 Example: max sum of subarray of size k
 
 2️⃣ Variable Size Window
   Window size changes dynamically
 Example: longest substring without repeating characters
+        Expand window → condition breaks
+        Shrink window → condition valid
+        Track best answer
+==============================================================================
+5. How Sliding Window Works (Step-by-Step)
+Example: Maximum Sum Subarray of Size K
+
+    Array: [2, 1, 5, 1, 3, 2], K = 3
+
+      1.First window: [2,1,5] → sum = 8
+      2.Slide window:
+          Remove 2
+          Add 1
+          New sum = 7
+      3.Continue until end
+      4.Track max sum
+
+  Time Complexity: O(n)
+  Space Complexity: O(1)
+
+==============================================================================
+let windowSum = 0;
+let maxSum = 0;
+let left = 0;
+
+for (let right = 0; right < arr.length; right++) {
+  windowSum += arr[right];
+
+  if (right >= k - 1) {
+    maxSum = Math.max(maxSum, windowSum);
+    windowSum -= arr[left];
+    left++;
+  }
+}
+
+===============================================================================
+3. When Should You Use Sliding Window?
+Use Sliding Window ONLY IF ALL CONDITIONS APPLY:
+Data structure is array or string
+Problem involves contiguous elements
+
+You are asked for:
+
+Maximum / minimum
+Longest / shortest
+Count of valid subarrays / substrings
+A brute-force solution uses nested loops
+Keyword Triggers in Questions
+“subarray”
+“substring”
+“continuous”
+“window”
+“longest”
+“maximum sum”
+“at most / at least”

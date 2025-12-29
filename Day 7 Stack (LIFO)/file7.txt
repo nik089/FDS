@@ -1,0 +1,83 @@
+Stack (LIFO)
+============
+1️⃣ What is a Stack? (Very Simple)
+    A Stack is a data structure where:
+        Last In → First Out (LIFO)
+
+That means:
+The last item added is the first item removed
+======================================================
+2️⃣ Real-Life Example (Easy to Remember)
+    Stack of Plates 🍽️
+            You put plates one by one
+            You remove the top plate first
+
+                                Top
+                                ┌───┐
+                                │ 3 │  ← removed first
+                                ├───┤
+                                │ 2 │
+                                ├───┤
+                                │ 1 │
+                                └───┘
+                                Bottom
+
+===========================================================                               
+3️⃣ Stack Operations (Only 3 You Must Know)
+| Operation      | Meaning              |
+| -------------- | -------------------- |
+| **Push**       | Add item to top      |
+| **Pop**        | Remove item from top |
+| **Peek / Top** | See top item         |
+
+=============================================================
+4️⃣ Stack Example (Visual Chart)
+    1.Start (Empty Stack):
+        []
+    Push 1 => [1]
+    Push 2 => [1,2]
+    Push 3=> [1, 2, 3]  ← Top
+    Pop => [1, 2]     ← 3 removed
+================================================================
+5️⃣ Stack in JavaScript (Very Basic)
+
+        let stack = [];
+        // Push
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        // Pop
+        stack.pop(); // removes 3
+        console.log(stack); // [1, 2]
+
+========================================================
+6️⃣ Why Do We Use Stack?
+    Because stack is perfect when:
+    You need to go back
+    You need undo
+    You need reverse
+    You need last action first
+
+=======================================================
+7️⃣ When Is Stack Used? (IMPORTANT)
+        | Use Case              | Why Stack                |
+    | --------------------- | ------------------------ |
+    | Undo / Redo           | Last action undone first |
+    | Browser back button   | Last page visited        |
+    | Function calls        | Call stack               |
+    | Expression evaluation | Operator precedence      |
+    | Parenthesis checking  | Nested structure         |
+    | Reverse string        | LIFO order               |
+=============================================================
+8️⃣ Time & Space Complexity (Interview Question)
+        | Operation | Time |
+        | --------- | ---- |
+        | Push      | O(1) |
+        | Pop       | O(1) |
+        | Peek      | O(1) |
+
+
+
+
+
+

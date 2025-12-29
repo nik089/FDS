@@ -7,11 +7,11 @@ FRONTEND INTERVIEW PRIORITY (OUT OF YOUR 25)
 
 4.Sliding Window Technique
 5.Two Pointer Technique
-6.Sorting + Custom Comparator
 7.Stack (LIFO)
+
+6.Sorting + Custom Comparator
 8.Recursion (basic)
 9.Memoization / Caching
-
 10.Debounce
 11. Throttle
 12.State / Space Optimization

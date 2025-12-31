@@ -4,11 +4,9 @@ FRONTEND INTERVIEW PRIORITY (OUT OF YOUR 25)
 1.Brute Force Approach
 2.Optimized Single Pass
 3.Hashing (Map / Set)
-
 4.Sliding Window Technique
 5.Two Pointer Technique
 7.Stack (LIFO)
-
 6.Sorting + Custom Comparator
 8.Recursion (basic)
 9.Memoization / Caching

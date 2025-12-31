@@ -111,3 +111,21 @@ Keyword Triggers in Questions
 “longest”
 “maximum sum”
 “at most / at least”
+
+Sliding Window ALGORITHM (STEP BY STEP)
+Generic Algorithm (Understand This First)
+  Create two pointers
+      left (start of window)
+      right (end of window)
+
+  Move right forward (expand window)
+  When condition breaks:
+      Move left forward (shrink window)
+  Update answer during movement
+
+
+| Sliding Window         | Two Pointer          |
+| ---------------------- | -------------------- |
+| Uses window size       | Uses two positions   |
+| Often sum/count/length | Often compare values |
+| Subarray / substring   | Pair / reverse       |

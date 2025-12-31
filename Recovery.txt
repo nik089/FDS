@@ -1,0 +1,30 @@
+1. TypeScript Interview and Revise
+2. Java Script Interview Question (Async, Promise, Event Loop,Polyfills)
+3. Unit testing in angular video and interview
+4. FRONTEND INTERVIEW PRIORITY
+5. Nest.js and MongoDB with curd operation
+6. CICD in frontend(with basic Docker and Jenkins) and GitHub Action  =>Progress
+7. Check Angular 21 Updated
+8. 75 DSA Question
+9. Basic System Design
+10.JS zip Practices
+11.Node.js express.js mongodb
+12.Youtube DSA Algo video check
+13.https://bigfrontend.dev/ Practices
+14.Next.js
+15.Azure Master the basics of Azure: Fundamentals
+16.weekhook, 
+17.vue.js
+18.python
+
+===============================================
+1 hour English practices
+daily coding practices
+===============================================
+100 Day leaning path:
+===============================================
+Day-1(01/01/2026)
+1.TypeScript Interview and Revise
+2.Unit testing in angular video and interview
+3.Jenkins and Docker (video and notes)
+4.Revise (Slide-Window);

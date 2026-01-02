@@ -13,18 +13,24 @@
 13.https://bigfrontend.dev/ Practices
 14.Next.js
 15.Azure Master the basics of Azure: Fundamentals
-16.weekhook, 
-17.vue.js
-18.python
+16.vue.js
+17.python
+18.React.js
+19.Practices dummy  Angular Project
 
-===============================================
+
+==================================================================================
 1 hour English practices
-daily coding practices
-===============================================
+2.daily coding practices
+====================================================================================
 100 Day leaning path:
 ===============================================
 Day-1(01/01/2026)
-1.TypeScript Interview and Revise
-2.Unit testing in angular video and interview
-3.Jenkins and Docker (video and notes)
-4.Revise (Slide-Window);
+1.Angular Signal (videos) and notes
+2.Jenkins and Docker (video and notes)
+
+Day-2(02/01/2026)
+1.Angular Signal todo and counter project
+2.Slide window program Practice
+3.CI + CD With Docker and Jenkins Deploy Dummy Project with notes
+

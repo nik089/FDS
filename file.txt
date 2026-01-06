@@ -21,10 +21,9 @@ MEDIUM PRIORITY (Know concept + basic example)
 ============================================================
 
 13.Prefix Sum
-
 14.Binary Search
-
 15.Queue (FIFO)
+
 
 16.Greedy Algorithm
 

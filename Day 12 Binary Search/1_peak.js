@@ -14,3 +14,4 @@ function findPeak(nums) {
 }
 
 console.log(findPeak([1,2,3,1])); // 2
+

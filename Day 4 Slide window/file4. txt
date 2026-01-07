@@ -42,7 +42,7 @@ for i
   Maximum / minimum / sum / count
 ❌ Do NOT use when elements are not continuous.
 
-
+========================================================
 5️⃣ Types of Sliding Window
   1️⃣ Fixed Size Window
   Window size = k

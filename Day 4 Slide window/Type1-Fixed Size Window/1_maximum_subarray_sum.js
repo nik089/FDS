@@ -24,10 +24,16 @@ function maxSum(arr, k) {
     sum += arr[i];
   }
   max = sum;
-  
-
 
   // slide window
+
+  // for (let right = k; right < arr.length; right++) {
+  //   windowSum += arr[right];          // add
+  //   windowSum -= arr[right - k];      // remove
+  //   maxSum = Math.max(maxSum, windowSum);
+  // }
+
+  // or
   for (let right = k; right < arr.length; right++) {
     // sum = sum - element_leaving + element_entering
     sum = sum - arr[right - k] + arr[right];
@@ -36,23 +42,19 @@ function maxSum(arr, k) {
   return max;
 }
 
-
-
 let arr = [2, 1, 5, 1, 3, 2];
 let target = 3;
-console.log(maxSum(arr, target)) //
-
+console.log(maxSum(arr, target)); //
 
 // 2️⃣ Step 1 — Build the first window
 // | i | arr[i] | sum (running) |
 // | - | ------ | ------------- |
 // | 0 | 2      | 2             |
 // | 1 | 1      | 3             |
-// | 2 | 5      | 8             |  
+// | 2 | 5      | 8             |
 
 // sum = 8
 // max = 8
-
 
 // sum = sum - element_leaving + element_entering
 // sum = sum - element_leaving + element_entering
@@ -60,8 +62,7 @@ console.log(maxSum(arr, target)) //
 
 //  sum = 8
 // max = 8
-// right starts at = k (3) 
-
+// right starts at = k (3)
 
 // | Iteration | right | Window (visual) | Calculation                     | sum (after) | max = Math.max(max, sum) |
 // | --------- | ----- | --------------- | ------------------------------- | ----------- | ------------------------ |
@@ -71,20 +72,20 @@ console.log(maxSum(arr, target)) //
 
 // =================================================================
 // 2.Find the maximum average of any subarray of size k.
-arr1 = [1, 12, -5, -6, 50, 3]
-k1 = 4
+arr1 = [1, 12, -5, -6, 50, 3];
+k1 = 4;
 // Step 1: First Window
-      // [1, 12, -5, -6]
-      // sum = 2
+// [1, 12, -5, -6]
+// sum = 2
 
 // Step 2: Slide Window
 // Remove 1, add 50
-      // [12, -5, -6, 50]
-      // sum = 51 ✅
+// [12, -5, -6, 50]
+// sum = 51 ✅
 // Remove 12, add 3
-      // [-5, -6, 50, 3]
-      // sum = 42 
-      // Answer=>Max average = 51 / 4 = 12.75
+// [-5, -6, 50, 3]
+// sum = 42
+// Answer=>Max average = 51 / 4 = 12.75
 
 function maxAverage(arr, k) {
   let sum = 0;
@@ -107,9 +108,9 @@ function maxAverage(arr, k) {
 // ❓ Problem
 // Count how many subarrays of size k have sum ≥ x.
 
-arr = [2, 1, 3, 4, 1]
-k = 2
-x = 5
+arr = [2, 1, 3, 4, 1];
+k = 2;
+x = 5;
 
 // Windows
 //       [2,1] → sum = 3 ❌
@@ -119,9 +120,9 @@ x = 5
 
 // Answer=>Count = 2
 
-
 function countSubarrays(arr, k, x) {
-  let sum = 0, count = 0;
+  let sum = 0,
+    count = 0;
   for (let i = 0; i < k; i++) {
     sum += arr[i];
   }
@@ -133,5 +134,3 @@ function countSubarrays(arr, k, x) {
   }
   return count;
 }
-
-

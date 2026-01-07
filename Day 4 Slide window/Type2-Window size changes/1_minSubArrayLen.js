@@ -3,25 +3,23 @@
 // // output = 2  →  [4,3]
 // Subarray length is not fixed and this type two Type 2️⃣ Variable Size Sliding Window
 
-function minSubArrayLen(target, arr) {
+function minSubArrayLen(arr, target) {
   let left = 0;
   let sum = 0;
   let minLen = Infinity;
 
   for (let right = 0; right < arr.length; right++) {
-    sum += arr[right];        // expand window
+    sum += arr[right]; // expand
 
-    while (sum >= target) {   // valid window
+    while (sum >= target) {
+      // valid window
       minLen = Math.min(minLen, right - left + 1);
-      sum -= arr[left];       // shrink window
+      sum -= arr[left]; // shrink
       left++;
     }
   }
-
-  return minLen === Infinity ? 0 : minLen;
+  return minLen;
 }
-
-
 
 // | Step | Line/Action                     | right | left  | sum   | minLen | Window (indexes) | Explanation               |
 // | ---- | ------------------------------- | ----- | ----- | ----- | ------ | ---------------- | ------------------------- |
@@ -49,8 +47,8 @@ function minSubArrayLen(target, arr) {
 // Example 3: Longest Subarray with Sum ≤ K
 // ❓ Problem Find the longest subarray whose sum is ≤ K.
 
-arr = [1, 2, 1, 0, 1, 1, 0]
-K = 4
+arr = [1, 2, 1, 0, 1, 1, 0];
+K = 4;
 // How It Works
 //     Expand right pointer
 //     If sum > K → shrink from left
@@ -60,7 +58,9 @@ K = 4
 // [1,2,1,0] → sum = 4 ✅ (length 4)
 
 function longestSubarray(arr, k) {
-  let left = 0, sum = 0, maxLen = 0;
+  let left = 0,
+    sum = 0,
+    maxLen = 0;
 
   for (let right = 0; right < arr.length; right++) {
     sum += arr[right];
@@ -80,7 +80,6 @@ function longestSubarray(arr, k) {
 // Input = "abcabcbb";
 // 3   → "abc"
 // // Output = 3
-
 
 // Why Sliding Window
 // Substring must be continuous
@@ -109,11 +108,11 @@ function longestUnique(s) {
 }
 
 //Fixed Window
-          //   Window size known
-              // ➡ subtract left
-              // ➡ add right
+//   Window size known
+// ➡ subtract left
+// ➡ add right
 
 // Variable Window
-        // Condition based
-        //     ➡ expand right
-        //     ➡ shrink left when violated
+// Condition based
+//     ➡ expand right
+//     ➡ shrink left when violated

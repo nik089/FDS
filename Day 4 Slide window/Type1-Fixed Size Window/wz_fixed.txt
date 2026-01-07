@@ -1,0 +1,119 @@
+1️⃣ What does FIXED WINDOW mean?
+
+    Fixed window means:
+    Window size is already decided and NEVER changes.
+
+      Example:
+      Window size = 3
+      No matter what:
+      Window size will always stay 3
+      It only moves forward
+
+===========================================================
+2️⃣ Very Simple Example (Numbers)
+
+    Array:
+    [1, 2, 3, 4, 5]
+    Window size = 3
+
+    Windows:
+    [1,2,3]
+    [2,3,4]
+    [3,4,5]
+Size is always 3.
+
+================================================================
+3️⃣ What do we do in Fixed Window?
+
+    Only two actions:
+      Add one new element (from right)
+      Remove one old element (from left)
+      Window size remains the same.
+
+================================================================
+4️⃣ How pointers move (IMPORTANT)
+
+    right → moves forward to add
+    left → moves forward to remove
+    Difference between them stays constant
+
+---------------------------------------------------------------
+    Formula:
+    window size = right - left + 1 = k
+
+==================================================================
+5️⃣ When do we use Fixed Window?
+
+    Use Fixed Window when problem says:
+      “subarray of size K”
+      “substring of length K”
+      “exactly K elements”
+      “fixed length window”
+
+===================================================================
+6️⃣ Step-by-Step Example (VERY EASY);
+
+Problem:
+Find maximum sum of subarray of size K = 3
+
+  Array:
+  [2, 1, 5, 1, 3, 2]
+
+  Step 1: First window (important)
+
+        Take first K elements:
+          [2,1,5]
+          sum = 8
+
+  Step 2: Slide the window
+
+        Move one step right:
+          Remove 2
+          Add 1
+
+        New window:
+          [1,5,1]
+          sum = 7
+
+  Step 3: Slide again
+
+        Remove 1
+        Add 3
+
+        Window:
+        [5,1,3]
+        sum = 9  ✅ max
+
+  Step 4: Slide again
+
+        Remove 5
+        Add 2
+
+        Window:
+
+        [1,3,2]
+        sum = 6
+
+=====================================================================
+ this is type first
+ Array = [2, 1, 5, 1, 3, 2]
+ K = 3
+ output = 9
+ Why Sliding Window?
+   All subarrays must be continuous and size is fixed.
+
+   How it works (concept)
+     First window: [2,1,5] → sum = 8
+     Slide window one step right:
+
+       Remove 2, add 1 → [1,5,1] → sum = 7
+
+     Slide again:
+       Remove 1, add 3 → [5,1,3] → sum = 9 (max);
+
+  Instead of recalculating sums, we reuse previous sum.
+
+===========================================================================
+      sum = sum - element_leaving + element_entering
+      sum = sum - element_leaving + element_entering
+            => sum - arr[right - k] + arr[right]

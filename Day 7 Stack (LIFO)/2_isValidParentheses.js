@@ -1,4 +1,4 @@
-// 2️⃣ Check Valid Parentheses (MOST ASKED)
+//   (2) Check Valid Parentheses (MOST ASKED)
 // 
 // | Input      | Result | Reason                 |
 // | ---------- | ------ | ---------------------- |

@@ -1,0 +1,22 @@
+1. What is a Binary Tree? (In Simple Words)
+
+    A Binary Tree is a non-linear data structure where:
+    Each node can have maximum two children
+
+        These children are called:
+            Left child
+            Right child
+
+It is called a tree because it looks like an inverted tree structure.
+
+==========================================================================
+Binary Tree Example Graph:
+
+          A
+         / \
+        B   C
+       /
+      D
+
+1. Root (Top node):
+    Root = the very top node

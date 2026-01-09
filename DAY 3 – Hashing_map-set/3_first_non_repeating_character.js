@@ -30,8 +30,8 @@ function firstNonRepeatingCharacter(str) {
 // | Iteration | `c` | `map.get(c)` | Condition (`=== 1`) | Action         |
 // | --------- | --- | ------------ | ------------------- | -------------- |
 // | 1         | n   | 1            | true                | **return 'n'** |
-// | 2         | i   | —            | —                   | ❌ Not executed |
-// | 3         | t   | —            | —                   | ❌ Not executed |
-// | 4         | e   | —            | —                   | ❌ Not executed |
-// | 5         | s   | —            | —                   | ❌ Not executed |
-// | 6         | h   | —            | —                   | ❌ Not executed |
+// | 2         | i   | —            | —                   |  (X)Not executed |
+// | 3         | t   | —            | —                   |  (X)Not executed |
+// | 4         | e   | —            | —                   |  (X)Not executed |
+// | 5         | s   | —            | —                   |  (X)Not executed |
+// | 6         | h   | —            | —                   |  (X)Not executed |

@@ -1,10 +1,10 @@
-1️⃣ WHAT is Prefix Sum?
+  (1) WHAT is Prefix Sum?
                 Prefix Sum is a technique where we build another array that stores running totals.
 
                 eg: arr   = [2, 4, 6, 3]
                     pref  = [2, 6, 12, 15] //Each value in pref = total from start to that index.
                 
-2️⃣ WHY do we use Prefix Sum?
+  (2) WHY do we use Prefix Sum?
             Because normally, if someone asks:
                     “What is the sum from index i to j?”
 
@@ -16,23 +16,23 @@ Prefix Sum makes it instant, using:
                         After that: every range sum → O(1)
                         It dramatically reduces time in problems with many range-sum queries.
 
-3️⃣ WHERE is Prefix Sum used?
+  (3) WHERE is Prefix Sum used?
 
         Prefix Sum is used in many common interview problems:
-        ✅ Range sum queries
+          (✓)Range sum queries
 
         Fast computation of sums from i to j.
-        ✅ Subarray sum = K
+          (✓)Subarray sum = K
         (especially with negative numbers — sliding window fails)
 
         Uses Prefix + HashMap.
-        ✅ Frequency or difference calculations
+          (✓)Frequency or difference calculations
 
         Like balancing or partitioning an array.
-        ✅ 2D matrix problems
+          (✓)2D matrix problems
 
         Fast rectangle-sum queries.
-        ✅ Counting type problems
+          (✓)Counting type problems
 
 Example: number of subarrays with specific condition.
 =================================================================

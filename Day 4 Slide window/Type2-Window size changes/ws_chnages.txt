@@ -1,4 +1,4 @@
-1️⃣ What is a WINDOW? (VERY SIMPLE)
+  (1) What is a WINDOW? (VERY SIMPLE)
   A window means:
       Some continuous elements you are looking at right now.
 
@@ -8,9 +8,9 @@ arr = [1, 2, 3, 4, 5]
                   You are only looking at 2, 3, 4
                   You are ignoring 1 and 5
                   They are together (continuous)
-                  👉 That group [2,3,4] is called a WINDOW.
+                    ==> That group [2,3,4] is called a WINDOW.
 ============================================================
-2️⃣ How do we choose a window?
+  (2) How do we choose a window?
 
       LEFT finger   RIGHT finger
 
@@ -20,7 +20,7 @@ arr = [1, 2, 3, 4, 5]
 
                [2, 3, 4]
 =================================================================
-3️⃣ What does EXPAND mean?
+  (3) What does EXPAND mean?
 
       Expand means:
             Move the RIGHT finger forward
@@ -45,11 +45,11 @@ arr = [1, 2, 3, 4, 5]
                       [1, 2, 3, 4, 5]
                       L     R
                       Window = [1,2,3]
-                                      👉 Window size is growing.
+                                        ==> Window size is growing.
 
 ======================================================================
 
-4️⃣ What does SHRINK mean? (MOST CONFUSING PART)
+(4)What does SHRINK mean? (MOST CONFUSING PART)
 
             Shrink means:
               Move the LEFT finger forward
@@ -65,20 +65,20 @@ arr = [1, 2, 3, 4, 5]
               Shrink again:
               [3]
 
-              👉 You are removing elements from the left side.
+                ==> You are removing elements from the left side.
 =======================================================================
 
-5️⃣ WHY do we SHRINK? (THIS IS KEY)
+(5)WHY do we SHRINK? (THIS IS KEY)
    We shrink ONLY when something is wrong.
         Examples of “wrong”:
         Sum became too big
         Too many characters
         Duplicate found
 
-👉 Shrink = fix the problem
+  ==> Shrink = fix the problem
 
 ===========================================================================
-6️⃣ REAL LIFE EXAMPLE (VERY IMPORTANT)
+(6) REAL LIFE EXAMPLE (VERY IMPORTANT)
 Imagine:
 
     You can carry only 2 apples
@@ -92,18 +92,18 @@ Imagine:
     Window = 2 apples ✅
 
     Pick one more:
-    🍎🍎🍎 ❌ TOO MANY
+    🍎🍎🍎  (X)TOO MANY
 
 
     What do you do?
-    👉 DROP one apple from the left
+      ==> DROP one apple from the left
 
     Now:
     🍎🍎 ✅
 
     That “dropping” = SHRINK
 ==============================================================
-7️⃣ Very Easy Number Example
+(7) Very Easy Number Example
 
 Array:
       [2, 3, 1, 2]
@@ -117,10 +117,10 @@ Array:
       Window = [2,3] sum = 5 ✅
 
       Expand again:
-      Window = [2,3,1] sum = 6 ❌ TOO BIG
+      Window = [2,3,1] sum = 6  (X)TOO BIG
 
       What do we do?
-      👉 SHRINK
+        ==> SHRINK
 
       Shrink:
       Window = [3,1] sum = 4 ✅
@@ -131,7 +131,7 @@ Array:
       Expand = add from right
       Shrink = remove from left
 =====================================================
-9️⃣ One Last Super-Simple Table
+(9) One Last Super-Simple Table
 Action	Finger moves	Result
 Expand	Right →	Window grows
 Shrink	Left →	Window reduces

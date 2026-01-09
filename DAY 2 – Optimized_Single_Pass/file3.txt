@@ -1,7 +1,7 @@
-1️⃣ Method Name
+  (1) Method Name
     Optimized Single Pass
 
-2️⃣ What is it?
+  (2) What is it?
 
     Optimized Single Pass means:
     Solve the problem by traversing the array only once and updating required values during that traversal.
@@ -11,7 +11,7 @@ Technically:
     No nested loops
     Use variables to track result
 
-3️⃣ Why it is used?
+  (3) Why it is used?
     It is used to:
     Remove unnecessary nested loops
     Improve performance
@@ -22,7 +22,7 @@ Observation skill
 Optimization mindset
 Clean logic
 
-4️⃣ When it is used?
+(4)When it is used?
     Use Optimized Single Pass when:
     You need max / min / sum / count
     Result depends on previous values
@@ -32,6 +32,6 @@ Avoid when:
     You need combinations or pairs
     Order matters across multiple indices
 
-5️⃣ Time & Space Complexity
+(5)Time & Space Complexity
     Time Complexity: O(n)
     Space Complexity: O(1)

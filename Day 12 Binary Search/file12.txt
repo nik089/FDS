@@ -52,7 +52,7 @@ space in half, achieving O(log n) time complexity.
     Binary search follows a binary decision tree where each comparison eliminates one half of the remaining search space, 
     creating a logarithmic execution path.
 
-1️⃣ What is Binary Search?
+  (1) What is Binary Search?
     Binary Search is an efficient algorithm to find an element in a sorted list.
     Key idea:
 
@@ -64,7 +64,7 @@ Works ONLY when data is:
     ✔ sorted (ascending or descending)
     ✔ random-access (arrays)
 
-2️⃣ When can we use Binary Search?
+  (2) When can we use Binary Search?
     Use it when:
       ✔ array is sorted
       ✔ you need fast search
@@ -75,17 +75,17 @@ Do NOT use when:
       ✘ linked list
       ✘ heavy insert/delete operations
 
-3️⃣ Algorithm (concept)
+  (3) Algorithm (concept)
       Given sorted array:
       [2, 4, 6, 8, 10, 12]
       target = 8
 
 Steps:
-    1️⃣ take the middle element
-    2️⃣ if mid == target → found
-    3️⃣ if target < mid → search left half
-    4️⃣ if target > mid → search right half
-    5️⃣ repeat until nothing left
+      (1) take the middle element
+      (2) if mid == target → found
+      (3) if target < mid → search left half
+    (4)if target > mid → search right half
+    (5)repeat until nothing left
 
 =============================================================
 🔧 Iterative Code (most common in interviews):
@@ -104,7 +104,7 @@ Steps:
           }
 
 ==================================================================
-4️⃣ Dry-run example (step-by-step)
+(4)Dry-run example (step-by-step)
         Array:
         [2, 4, 6, 8, 10, 12]
         target = 8
@@ -116,7 +116,7 @@ Steps:
 Answer: index 3
 
 ====================================================================
-5️⃣ Time & Space Complexity
+(5)Time & Space Complexity
 Case	Complexity	Why
 Best	O(1)	found mid first try
 Average	O(log n)	divide in half each iteration
@@ -135,17 +135,17 @@ Space	O(1)	iterative, no extra memory
                      [8]       [12]
                     mid=8  → FOUND
 ===============================================================
-1️⃣ First & Last Position of Element in Sorted Array
+  (1) First & Last Position of Element in Sorted Array
 ([2,4,4,4,6,8], 4); // [1, 3]
 
-2️⃣ Insert Position (Lower Bound)
+  (2) Insert Position (Lower Bound)
 ([1,3,5,6], 4); // 2
 
-3️⃣ Search in Rotated Sorted Array;
+  (3) Search in Rotated Sorted Array;
 ([4,5,6,7,0,1,2], 0); // 4
 
-4️⃣ Square Root (Binary Search on Answer)
+(4)Square Root (Binary Search on Answer)
 ((16)); // 4
 
-5️⃣ Find Peak Element;
+(5)Find Peak Element;
 [1,2,3,1]  → peak = 3 (index 2)

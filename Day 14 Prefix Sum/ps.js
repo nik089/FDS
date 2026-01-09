@@ -6,7 +6,7 @@ queries = [
   (2, 3)
 ] //“What is the sum from index L to R?”
 
-// 1️⃣ Build Prefix Sum
+//   (1) Build Prefix Sum
 // | i | arr[i] | prefix[i] |
 // | - | ------ | --------- |
 // | 0 | 2      | 2         |

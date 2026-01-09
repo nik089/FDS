@@ -1,7 +1,7 @@
 // 1. What is Throttle? (Very Simple)   
      
 //     Throttle means:
-// 👉 “Allow something to happen only once in a fixed time.”
+//   ==> “Allow something to happen only once in a fixed time.”
         // Even if you try many times, it will not happen again until time passes.
 //  ==========or
 
@@ -18,13 +18,13 @@
 //     Even if pressure is high, output is controlled.
 
 // or
-// 2️⃣ Real-Life Example (Very Simple)
+//   (2) Real-Life Example (Very Simple)
 // 🚦 Traffic Signal Example
 //     Green light stays ON for 30 seconds
 //     Cars cannot change signal faster than that
 //     No matter how many cars come:
 //     Light changes only after fixed time
-// 👉 This is Throttle
+//   ==> This is Throttle
 
 
 // 3. Why Do We Use Throttle?

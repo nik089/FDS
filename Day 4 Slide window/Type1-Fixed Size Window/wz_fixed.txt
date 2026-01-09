@@ -1,4 +1,4 @@
-1️⃣ What does FIXED WINDOW mean?
+  (1) What does FIXED WINDOW mean?
 
     Fixed window means:
     Window size is already decided and NEVER changes.
@@ -10,7 +10,7 @@
       It only moves forward
 
 ===========================================================
-2️⃣ Very Simple Example (Numbers)
+  (2) Very Simple Example (Numbers)
 
     Array:
     [1, 2, 3, 4, 5]
@@ -23,7 +23,7 @@
 Size is always 3.
 
 ================================================================
-3️⃣ What do we do in Fixed Window?
+  (3) What do we do in Fixed Window?
 
     Only two actions:
       Add one new element (from right)
@@ -31,7 +31,7 @@ Size is always 3.
       Window size remains the same.
 
 ================================================================
-4️⃣ How pointers move (IMPORTANT)
+(4)How pointers move (IMPORTANT)
 
     right → moves forward to add
     left → moves forward to remove
@@ -42,7 +42,7 @@ Size is always 3.
     window size = right - left + 1 = k
 
 ==================================================================
-5️⃣ When do we use Fixed Window?
+(5)When do we use Fixed Window?
 
     Use Fixed Window when problem says:
       “subarray of size K”
@@ -51,7 +51,7 @@ Size is always 3.
       “fixed length window”
 
 ===================================================================
-6️⃣ Step-by-Step Example (VERY EASY);
+(6) Step-by-Step Example (VERY EASY);
 
 Problem:
 Find maximum sum of subarray of size K = 3
@@ -82,7 +82,7 @@ Find maximum sum of subarray of size K = 3
 
         Window:
         [5,1,3]
-        sum = 9  ✅ max
+        sum = 9    (✓)max
 
   Step 4: Slide again
 

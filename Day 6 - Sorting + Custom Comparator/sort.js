@@ -1,11 +1,11 @@
 // JavaScript sorting requires a custom comparator to correctly sort numbers, objects, or 
 // complex business logic because the default sort treats elements as strings.
 
-// 1️⃣ Why does [10, 2, 5].sort() give wrong output?
+//   (1) Why does [10, 2, 5].sort() give wrong output?
 //     Why is the output incorrect?
 
     [10, 2, 5].sort();  
-//     output = [10, 2, 5] ❌
+//     output = [10, 2, 5] (X)
 
     
 [10, 2, 5].sort((a, b) => a - b);
@@ -13,12 +13,12 @@
 // Because JavaScript sorts elements as strings by default, not numbers.
 
 
-// 2️⃣ How do you sort numbers in ascending and descending order?
+//   (2) How do you sort numbers in ascending and descending order?
     const arr = [5, 1, 9, 2];
     arr.sort((a, b) => a - b); // Ascending
     arr.sort((a, b) => b - a); // Descending
 
-// 3️⃣ How do you sort an array of objects by a property?
+//   (3) How do you sort an array of objects by a property?
     const users = [
   { name: 'Amit', age: 30 },
   { name: 'Ravi', age: 25 }
@@ -26,11 +26,11 @@
 
 users.sort((a, b) => a.age - b.age); //[{name:'Ravi', age:25}, {name:'Amit', age:30}]
 
-// 4️⃣ How do you sort strings alphabetically (case-insensitive)?
+// (4)How do you sort strings alphabetically (case-insensitive)?
 const names = ['Zara', 'adam', 'Bob'];
 names.sort((a, b) => a.localeCompare(b));
 
-// 5️⃣ How do you sort by multiple fields?
+// (5)How do you sort by multiple fields?
     // Sort by age, then name.
 // users.sort((a, b) => {
 //   if (a.age !== b.age) {
@@ -39,7 +39,7 @@ names.sort((a, b) => a.localeCompare(b));
 //   return a.name.localeCompare(b.name);
 // });
 
-// 6️⃣ How do you sort even numbers first, then odd numbers?
+// (6) How do you sort even numbers first, then odd numbers?
 const arr1 = [1,2,3,4,5,6];
 arr1.sort((a, b) => {
   if (a % 2 === 0 && b % 2 !== 0) return -1;
@@ -47,8 +47,8 @@ arr1.sort((a, b) => {
   return a - b;
 }); //[2,4,6,1,3,5]
 
-// 7️⃣ Does sort() mutate the original array?
-//  ✅ Yes
+// (7) Does sort() mutate the original array?
+//    (✓)Yes
 const sorted = [...arr].sort((a, b) => a - b);
 
 const dates = [
@@ -58,13 +58,13 @@ const dates = [
 
 dates.sort((a, b) => a - b);
 
-// 9️⃣ How do you sort array by string length?
+// (9) How do you sort array by string length?
 
 const words = ['apple', 'hi', 'banana'];
 words.sort((a, b) => a.length - b.length);  
 console.log(word) //['hi', 'apple', 'banana']
 
-// 🔟 How do you sort without modifying original data? (Angular)
+// (10) How do you sort without modifying original data? (Angular)
 const sortedProducts = [...products].sort(
   (a, b) => a.price - b.price
 );
@@ -74,7 +74,7 @@ const arr11 = [3,1,2,2,3,4];
 const result = [...new Set(arr11)].sort((a,b)=>a-b); //[1,2,3,4]
 
 
-// 🎯 TOP 5 YOU MUST REMEMBER FOR INTERVIEW
+// ##Imp## TOP 5 YOU MUST REMEMBER FOR INTERVIEW
     // Default sort is string-based
     // Always use comparator for numbers
     // sort() mutates original array
@@ -88,17 +88,17 @@ const result = [...new Set(arr11)].sort((a,b)=>a-b); //[1,2,3,4]
         // “When sorting two items, which one should come first?”
 
 
-// 2️⃣ Why Do We Need a Comparator?
+//   (2) Why Do We Need a Comparator?
 //     JavaScript’s default sort():
 //     Converts values to strings
 //     Sorts alphabetically (lexicographically)
 
 // Problem Example
                 [10, 2, 5].sort();
-                            // Output: [10, 2, 5] ❌ 
+                            // Output: [10, 2, 5]  (X)
                                     // "10" comes before "2" alphabetically
 
-// 3️⃣ Comparator Function Syntax
+//   (3) Comparator Function Syntax
         // array.sort((a, b) => {
         //         return a - b;
         //         });

@@ -57,7 +57,7 @@ function factorial(n, memo = {}) {
 }
 
 
-// 4️⃣ Memoize Function with Multiple Arguments
+// (4)Memoize Function with Multiple Arguments
 const add = (a, b) => a + b;
 const memoizedAdd = memoize(add);
 
@@ -65,7 +65,7 @@ memoizedAdd(2, 3);
 memoizedAdd(2, 3);
 console.log(memoizedAdd(2, 3)); // Output: 5 (computed once, then cached)
 
-// 5️⃣ Memoize Function with Object Arguments
+// (5)Memoize Function with Object Arguments
 const obj = (a, b) => ({ a, b });
 const memoizedObj = memoize(obj);
 
@@ -73,7 +73,7 @@ memoizedObj({ x: 1 }, { y: 2 });
 memoizedObj({ x: 1 }, { y: 2 });
 console.log(memoizedObj({ x: 1 }, { y: 2 })); // Output: { a: { x: 1 }, b: { y: 2 } }// (computed once, then cached)
 
-// 6️⃣ Clear Cache Functionality
+// (6) Clear Cache Functionality
 function memoizeWithClear(fn) {
   const cache = {};
     const memoizedFn = function (...args) {
@@ -98,7 +98,7 @@ console.log(memoizedMultiply(2, 3));// Output: 6 (from cache)
 memoizedMultiply.clearCache(); // Clear the cache
 console.log(memoizedMultiply(2, 3)); // Output: 6 (recomputed after cache clear)    
 
-// 7️⃣ Memoize Asynchronous Function
+// (7) Memoize Asynchronous Function
 function memoizeAsync(fn) {
   const cache = {};
     return async function (...args) {

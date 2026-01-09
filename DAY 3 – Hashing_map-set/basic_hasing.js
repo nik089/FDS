@@ -52,9 +52,9 @@ mySet.forEach((value) => {
    /// 2
 // ============================================================
 // 3. Object (Allowed but not preferred)
-// ❌ Keys only strings
-// ❌ Prototype issues
-// ❌ Less predictable
+//  (X)Keys only strings
+//  (X)Prototype issues
+//  (X)Less predictable
 const myObject = {};
 myObject['name'] = 'Alice';
 myObject['age'] = 25;
@@ -68,7 +68,7 @@ console.log(Object.keys(myObject).length); // 1
 // | Feature          | Map       | Set         | Object    |
 // | ---------------- | --------- | ----------- | --------- |
 // | Stores           | Key–Value | Values only | Key–Value |
-// | Duplicate keys   | ❌         | ❌           | ❌         |
+// | Duplicate keys   |  (X)        |  (X)          |  (X)        |
 // | Key types        | Any       | Value only  | String    |
 // | Lookup time      | O(1)      | O(1)        | O(1)      |
 // | Interview choice | ⭐⭐⭐       | ⭐⭐          | ⭐         |
@@ -86,7 +86,7 @@ console.log(Object.keys(myObject).length); // 1
 // 8.anagram
 // 9.pair
 // 10.intersection
-// 👉 Hashing is almost always the correct approach
+//   ==> Hashing is almost always the correct approach
 
 // =======================================================================================
 // duplicate / unique → Set
@@ -116,7 +116,7 @@ console.log(Object.keys(myObject).length); // 1
 // console.log(user1.address.city);//Noida
 
 // expalination:
-// 1️⃣ Case: let user2 = user1
+//   (1) Case: let user2 = user1
     // let user1 = { name: "Amit", address: { city: "Delhi" } };
     // let user2 = user1; 
 
@@ -135,7 +135,7 @@ console.log(Object.keys(myObject).length); // 1
     // result: console.log(user1.address.city); // "Noida"
 
 
-// 2️⃣ Case: let user2 = { ...user1 };
+//   (2) Case: let user2 = { ...user1 };
     let user1 = { name: "Amit", address: { city: "Delhi" } };   
     let user2 = { ...user1 }; // Shallow copy
     user2.address.city = "Noida";
@@ -198,7 +198,7 @@ console.log(a === b);  // false
 
 
 // =============================================================
-// 11️⃣ Deep Copy Using Recursion (Advanced Interview)
+// 1  (1) Deep Copy Using Recursion (Advanced Interview)
 function deepCopy(obj) {
   if (obj === null || typeof obj !== "object") {
     return obj;

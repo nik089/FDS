@@ -46,7 +46,7 @@ let arr = [2, 1, 5, 1, 3, 2];
 let target = 3;
 console.log(maxSum(arr, target)); //
 
-// 2️⃣ Step 1 — Build the first window
+//   (2) Step 1 — Build the first window
 // | i | arr[i] | sum (running) |
 // | - | ------ | ------------- |
 // | 0 | 2      | 2             |
@@ -113,8 +113,8 @@ k = 2;
 x = 5;
 
 // Windows
-//       [2,1] → sum = 3 ❌
-//       [1,3] → sum = 4 ❌
+//       [2,1] → sum = 3 (X)
+//       [1,3] → sum = 4 (X)
 //       [3,4] → sum = 7 ✅
 //       [4,1] → sum = 5 ✅
 

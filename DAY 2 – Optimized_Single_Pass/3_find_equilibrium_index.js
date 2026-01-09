@@ -12,12 +12,12 @@
 // Left side → nothing
 // Right side → 2 + 0 + 3 = 5
 
-// 0 ≠ 5 ❌
+// 0 ≠ 5 (X)
 
 // step2: Check index 1
 // Left side → 1 = 1
 // Right side → 0 + 3 = 3
-// 1 ≠ 3 ❌
+// 1 ≠ 3 (X)
 
 // step3: Check index 2
 // Left side → 1 + 2 = 3
@@ -79,9 +79,9 @@ console.log(findEquilibriumIndex([4, 2, 2])); // 0
 
 // | i | arr[i] | totalSum BEFORE | totalSum AFTER (rightSum) | leftSum | leftSum === rightSum |
 // | - | ------ | --------------- | ------------------------- | ------- | -------------------- |
-// | 0 | 1      | 6               | 5                         | 0       | ❌                    |
-// | 1 | 2      | 5               | 3                         | 1       | ❌                    |
-// | 2 | 0      | 3               | 3                         | 3       | ✅                    |
+// | 0 | 1      | 6               | 5                         | 0       |  (X)                   |
+// | 1 | 2      | 5               | 3                         | 1       |  (X)                   |
+// | 2 | 0      | 3               | 3                         | 3       |   (✓)                   |
 
 
 

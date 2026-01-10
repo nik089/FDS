@@ -71,7 +71,7 @@ console.log(Object.keys(myObject).length); // 1
 // | Duplicate keys   |  (X)        |  (X)          |  (X)        |
 // | Key types        | Any       | Value only  | String    |
 // | Lookup time      | O(1)      | O(1)        | O(1)      |
-// | Interview choice | ⭐⭐⭐       | ⭐⭐          | ⭐         |
+// | Interview choice | ***       | **          | *         |
 
 
 // ======================================================================================

@@ -1,5 +1,5 @@
 FRONTEND INTERVIEW PRIORITY (OUT OF YOUR 25)
-⭐ VERY IMPORTANT (Must Master – 80% interview questions)
+* VERY IMPORTANT (Must Master – 80% interview questions)
 
 1.Brute Force Approach
 2.Optimized Single Pass

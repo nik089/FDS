@@ -67,8 +67,8 @@ function LCA_BST(root, p, q) {
 // | Aspect          | `LCA` (Binary Tree) | `LCA_BST` (BST) |
 // | --------------- | ------------------- | --------------- |
 // | Tree type       | Any Binary Tree     | Only BST        |
-// | Uses ordering   | ❌ No                | ✅ Yes           |
+// | Uses ordering   | (X) No                |  Yes           |
 // | Recursive calls | Left **and** Right  | Only one side   |
 // | Time complexity | O(n)                | O(h)            |
-// | Faster          | ❌                   | ✅               |
+// | Faster          | (X)                   |                |
 

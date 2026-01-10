@@ -74,3 +74,13 @@ What is a Binary Tree? How is it different from a Binary Search Tree?
 
 
 
+1. What Is BT and BST?
+    Binary Tree (BT):
+        A data structure
+        Each node has at most two children
+        No ordering rule
+
+    Binary Search Tree (BST):
+        A type of Binary Tree
+        Has ordering rules:
+        Left < Root < Right

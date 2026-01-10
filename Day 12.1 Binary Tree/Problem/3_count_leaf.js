@@ -43,3 +43,10 @@
 
 
 
+// Call Stack Visualization:
+                        // countLeaf(10)
+                        // ├─ countLeaf(5)
+                        // │   ├─ countLeaf(3) → 1
+                        // │   └─ countLeaf(7) → 1
+                        // └─ countLeaf(20)
+                        //     └─ countLeaf(30) → 1

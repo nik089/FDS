@@ -173,6 +173,12 @@ Real-World Example:
                 Emergency room patients
                 Dijkstra’s algorithm
 
+If priorities are equal:
+
+                  pq.enqueue("X", 2);
+                  pq.enqueue("Y", 2);
+                              ====>  X is removed before Y (becoz of fifo)
+
 ============================================================================================================
 4. Deque (Double-Ended Queue):
 

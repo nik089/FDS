@@ -13,7 +13,8 @@ class Queue {
   }
 
   dequeue() {
-    return this.items.shift();
+    return this.items.length ? this.items.shift() : null;
+
   }
 }
 

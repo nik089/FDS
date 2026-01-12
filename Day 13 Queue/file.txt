@@ -1,0 +1,72 @@
+1. What is a Queue?
+      A Queue is a linear data structure that follows:
+
+      FIFO – First In, First Out
+===> The element that enters first is removed first.
+
+Real-life example
+A line at a bank counter:
+      First person in line → served first
+      New people join at the end
+
+======================================================================================================
+Core Operations:
+| Operation          | Meaning                                     |
+| ------------------ | ------------------------------------------- |
+| **enqueue(x)**     | Add an element to the **back** of the queue |
+| **dequeue()**      | Remove an element from the **front**        |
+| **front / peek()** | View the front element without removing     |
+| **isEmpty()**      | Check whether the queue has no elements     |
+========================================================================================================
+
+Visual Example:
+              Start with an empty queue:
+                                      [  ]
+
+              Enqueue 10, 20, 30:
+                              Front → [10, 20, 30] ← Back
+
+              Dequeue:
+                     Front → [20, 30] ← Back
+==========================================================================================================
+enqueue(10);
+enqueue(20);
+enqueue(30);
+
+Front → [10, 20, 30] ← Rear
+
+dequeue()
+
+Front → [20, 30] ← Rear
+
+===========================================================================================================
+Where queues are used:
+              Queues are widely used in systems where order matters, such as:
+              Task scheduling (CPU job scheduling)
+              Printing systems (print jobs go in order)
+              Handling requests in servers
+              Breadth-first search (BFS) in algorithms
+              Messaging systems / event queues
+              Async programming and buffering (network packets, IO)
+
+============================================================================================================
+Variants of Queues:
+
+1. Simple Queue (Normal Queue)
+    Insert at rear
+    Remove from front
+
+2. Circular Queue:
+    Last position connects back to first
+    Used to save memory
+
+3. Priority Queue:
+    Element with highest priority is removed first
+    FIFO is not followed strictly
+
+4. Deque (Double-Ended Queue):
+    Insert and delete from both ends
+==============================================================================================================
+Time Complexity:
+          Enqueue: O(1)
+          Dequeue: O(1)

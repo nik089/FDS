@@ -1,0 +1,43 @@
+// Floyd’s Algorithm, also called the Tortoise and Hare algorithm, is a two-pointer technique used to:
+
+// Detect a cycle in a linked list
+// Find the starting node of the cycle (advanced but commonly asked)
+// It works in O(n) time and O(1) space, which is why it is preferred in interviews.
+
+function hasCycle(head) {
+  let slow = head;
+  let fast = head;
+
+  while (fast && fast.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+
+    if (slow === fast) {
+      return true;
+    }
+  }
+  return false;
+}
+
+
+// Step 1: slow = B, fast = C
+// Step 2: slow = C, fast = E
+// Step 3: slow = D, fast = C
+// Step 4: slow = E, fast = E  ← MEET
+// Cycle detected
+
+
+// 5. Algorithm Steps (Detection Only):
+
+                                // 1. Initialize:
+
+                                //         slow = head
+                                //         fast = head
+
+                                // 2. Loop while fast and fast.next exist:
+
+                                //                                 slow = slow.next
+                                //                                 fast = fast.next.next
+
+                                // 3. If slow === fast → cycle exists
+                                // 4. If loop ends → no cycle

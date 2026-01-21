@@ -1,0 +1,127 @@
+SORTING & SEARCHING ALGORITHMS — CHEAT SHEET
+------------------------------------------------------------------------------
+This cheat sheet provides a quick reference to common sorting and searching algorithms, their time complexities, and use cases.
+------------------------------------------------------------------------------
+1. Sorting Algorithms
+    1. Bubble Sort (***)
+        Idea: Swap adjacent elements repeatedly
+        Best For: Learning only
+==============================================================================
+    Algorithm:
+        for i from 0 to n-1
+            for j from 0 to n-i-1
+                if arr[j] > arr[j+1]
+                    swap arr[j] and arr[j+1]
+    
+    Example:
+       [5,1,4,2] → [1,4,2,5] → [1,2,4,5]
+    
+    Time: O(n²)
+    Space: O(1)
+    Stable: Yes
+
+------------------------------------------------------------------------------
+    2. Selection Sort (***)
+        Idea: Select the minimum element and place it at the beginning
+        Best For: Small datasets    
+==============================================================================
+    Algorithm:
+        for i from 0 to n-1
+            minIndex = i
+            for j from i+1 to n
+                if arr[j] < arr[minIndex]
+                    minIndex = j
+            swap arr[i] and arr[minIndex]
+    
+    Example:
+       [5,1,4,2] → [1,5,4,2] → [1,2,4,5]
+    
+    Time: O(n²)
+    Space: O(1)
+    Stable: No
+------------------------------------------------------------------------------
+    3. Insertion Sort (*****)
+        Idea: Build sorted array one element at a time
+        Best For: Nearly sorted data
+==============================================================================
+    Algorithm:
+
+        for i from 1 to n-1
+            key = arr[i]
+            j = i - 1
+            while j >= 0 and arr[j] > key
+                arr[j + 1] = arr[j]
+                j = j - 1
+            arr[j + 1] = key
+    Example:
+       [5,1,4,2] → [1,5,4,2] → [1,4,5,2] → [1,2,4,5]
+    Time: O(n²)
+    Space: O(1)
+    Stable: Yes
+------------------------------------------------------------------------------
+
+    4. Merge Sort (****)
+        Idea: Divide and conquer, merge sorted halves
+        Best For: Large datasets, stable sort
+==============================================================================
+    Algorithm:
+        if length(arr) > 1
+            mid = length(arr) / 2
+            left = arr[0..mid-1]
+            right = arr[mid..end]
+            mergeSort(left)
+            mergeSort(right)
+            merge left and right into arr
+    
+    Example:
+       [5,1,4,2] → [5,1] & [4,2] → [1,5] & [2,4] → [1,2,4,5]
+    
+    Time: O(n log n)
+    Space: O(n)
+    Stable: Yes
+
+------------------------------------------------------------------------------
+    5. Quick Sort (****)
+        Idea: Divide and conquer, partition around pivot
+        Best For: Average case performance  
+==============================================================================
+    Algorithm:
+        if length(arr) > 1
+            pivot = arr[end]
+            left = []
+            right = []
+            for i from 0 to length(arr)-2
+                if arr[i] < pivot
+                    left.append(arr[i])
+                else
+                    right.append(arr[i])
+            return quickSort(left) + [pivot] + quickSort(right)
+        else
+            return arr
+    Example:
+       [5,1,4,2] → pivot=2 → [1] & [5,4] → [1,2,4,5]
+    Time: O(n log n) average, O(n²) worst
+    Space: O(log n) 
+    Stable: No
+------------------------------------------------------------------------------
+2. Searching Algorithms
+    1. Linear Search (*****)
+        Idea: Check each element sequentially
+        Best For: Unsorted data, small datasets
+==============================================================================
+    Algorithm:
+        for i from 0 to n-1
+            if arr[i] == target
+                return i
+        return -1
+    
+    Example:
+       arr = [5,1,4,2], target = 4 → return 2
+    
+    Time: O(n)
+    Space: O(1)
+------------------------------------------------------------------------------
+2. Binary Search — (*****)
+
+
+                    

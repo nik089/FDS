@@ -1,119 +1,358 @@
-  (1) What does FIXED WINDOW mean?
+╔══════════════════════════════════════════════════════════════╗
+║              🟨 SLIDING WINDOW — FIXED WINDOW               ║
+╚══════════════════════════════════════════════════════════════╝
 
-    Fixed window means:
-    Window size is already decided and NEVER changes.
 
-      Example:
-      Window size = 3
-      No matter what:
-      Window size will always stay 3
-      It only moves forward
+🟨 1. FIXED WINDOW KYA HAI?
 
-===========================================================
-  (2) Very Simple Example (Numbers)
+FIXED = WINDOW KA SIZE FIXED HAI = K
 
-    Array:
-    [1, 2, 3, 4, 5]
-    Window size = 3
+Window ka size kabhi change nahi hota.
+Sirf window aage MOVE karti hai.
 
-    Windows:
-    [1,2,3]
-    [2,3,4]
-    [3,4,5]
-Size is always 3.
+Example:
+K = 3
 
-================================================================
-  (3) What do we do in Fixed Window?
+[1, 2, 3, 4, 5]
 
-    Only two actions:
-      Add one new element (from right)
-      Remove one old element (from left)
-      Window size remains the same.
+Windows:
 
-================================================================
-(4)How pointers move (IMPORTANT)
+[1, 2, 3]
+   ↓
+[2, 3, 4]
+   ↓
+[3, 4, 5]
 
-    right → moves forward to add
-    left → moves forward to remove
-    Difference between them stays constant
+Har window mein EXACTLY 3 elements hain.
 
----------------------------------------------------------------
-    Formula:
-    window size = right - left + 1 = k
+🧠 YAAD:
+"SIZE FIXED → WINDOW SLIDE"
 
-==================================================================
-(5)When do we use Fixed Window?
 
-    Use Fixed Window when problem says:
-      “subarray of size K”
-      “substring of length K”
-      “exactly K elements”
-      “fixed length window”
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-===================================================================
-(6) Step-by-Step Example (VERY EASY);
+🟨 2. FIXED WINDOW MEIN KYA HOTA HAI?
 
-Problem:
-Find maximum sum of subarray of size K = 3
+Har baar sirf 2 kaam:
 
-  Array:
-  [2, 1, 5, 1, 3, 2]
+❌ LEFT SE → 1 OLD ELEMENT REMOVE
+➕ RIGHT SE → 1 NEW ELEMENT ADD
 
-  Step 1: First window (important)
+Window ka size same rehta hai.
 
-        Take first K elements:
-          [2,1,5]
-          sum = 8
+Example:
 
-  Step 2: Slide the window
+[2, 1, 5]        →  [1, 5, 1]
+  ❌                 ➕
 
-        Move one step right:
-          Remove 2
-          Add 1
+Remove 2
+Add 1
 
-        New window:
-          [1,5,1]
-          sum = 7
+Size:
+3 → 3 → 3 → 3
 
-  Step 3: Slide again
 
-        Remove 1
-        Add 3
+🧠 MANTRA:
 
-        Window:
-        [5,1,3]
-        sum = 9    (✓)max
+"EK BAHAR ❌
+ EK ANDAR ➕
+ SIZE SAME"
 
-  Step 4: Slide again
 
-        Remove 5
-        Add 2
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-        Window:
+🟨 3. POINTERS KAISE MOVE KARTE HAIN?
 
-        [1,3,2]
-        sum = 6
+LEFT  → window ka START
+RIGHT → window ka END
 
-=====================================================================
- this is type first
- Array = [2, 1, 5, 1, 3, 2]
- K = 3
- output = 9
- Why Sliding Window?
-   All subarrays must be continuous and size is fixed.
+RIGHT → ➡️ AAGE MOVE → NEW ELEMENT ADD
+LEFT  → ➡️ AAGE MOVE → OLD ELEMENT REMOVE
 
-   How it works (concept)
-     First window: [2,1,5] → sum = 8
-     Slide window one step right:
+Dono SAME DIRECTION mein move karte hain.
 
-       Remove 2, add 1 → [1,5,1] → sum = 7
+Example:
 
-     Slide again:
-       Remove 1, add 3 → [5,1,3] → sum = 9 (max);
+[2, 1, 5, 1, 3, 2]
+ ↑        ↑
+LEFT    RIGHT
 
-  Instead of recalculating sums, we reuse previous sum.
+Window size = 3
 
-===========================================================================
-      sum = sum - element_leaving + element_entering
-      sum = sum - element_leaving + element_entering
-            => sum - arr[right - k] + arr[right]
+
+🧠 IMPORTANT:
+
+RIGHT = ADD ➕
+LEFT  = REMOVE ➖
+
+
+Window size:
+
+RIGHT - LEFT + 1 = K
+
+
+Example:
+
+LEFT = 0
+RIGHT = 2
+
+2 - 0 + 1 = 3 ✅
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🟨 4. KAB FIXED WINDOW LAGANA HAI?
+
+Question mein ye words/meaning aaye:
+
+✅ "subarray of size K"
+✅ "substring of length K"
+✅ "exactly K elements"
+✅ "window of size K"
+✅ "K consecutive elements"
+✅ "every K elements"
+
+→ 🟨 FIXED SLIDING WINDOW
+
+
+🧠 SHORTCUT:
+
+"K FIXED HAI?"
+      ↓
+    YES
+      ↓
+🟨 FIXED WINDOW
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🟨 5. EXAMPLE — MAXIMUM SUM OF K ELEMENTS
+
+Array:
+
+[2, 1, 5, 1, 3, 2]
+
+K = 3
+
+Question:
+"Find maximum sum of subarray of size 3"
+
+
+STEP 1️⃣ — FIRST WINDOW
+
+[2, 1, 5, 1, 3, 2]
+ └───────┘
+    K=3
+
+2 + 1 + 5 = 8
+
+SUM = 8
+
+
+STEP 2️⃣ — SLIDE
+
+Remove 2 ❌
+Add 1   ➕
+
+[2, 1, 5, 1, 3, 2]
+    └───────┘
+
+Window:
+[1, 5, 1]
+
+SUM = 7
+
+
+STEP 3️⃣ — SLIDE
+
+Remove 1 ❌
+Add 3   ➕
+
+[2, 1, 5, 1, 3, 2]
+       └───────┘
+
+Window:
+[5, 1, 3]
+
+SUM = 9 ⭐ MAX
+
+
+STEP 4️⃣ — SLIDE
+
+Remove 5 ❌
+Add 2   ➕
+
+[2, 1, 5, 1, 3, 2]
+          └───────┘
+
+Window:
+[1, 3, 2]
+
+SUM = 6
+
+
+FINAL ANSWER = 9 ✅
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🟨 6. SLIDING WINDOW KA MAGIC ⭐
+
+Normal approach:
+
+Har window ka SUM dobara calculate karo.
+
+[2,1,5] → 8
+[1,5,1] → 7
+[5,1,3] → 9
+[1,3,2] → 6
+
+❌ Baar-baar calculation.
+
+
+Sliding Window:
+
+OLD SUM ko reuse karo.
+
+NEW SUM =
+OLD SUM
+- element leaving
++ element entering
+
+
+Formula:
+
+sum = sum - arr[left] + arr[right]
+
+
+Ya agar RIGHT pointer use kar rahe ho:
+
+sum = sum - arr[right - K] + arr[right]
+
+
+🧠 YAAD:
+
+"PURANA HATAO
+ NAYA JODHO"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🟨 7. CODE PATTERN
+
+function maxSum(arr, k) {
+
+    let sum = 0;
+
+    // FIRST WINDOW
+    for (let i = 0; i < k; i++) {
+        sum += arr[i];
+    }
+
+    let max = sum;
+
+    // SLIDE WINDOW
+    for (let right = k; right < arr.length; right++) {
+
+        sum = sum
+            - arr[right - k]
+            + arr[right];
+
+        max = Math.max(max, sum);
+    }
+
+    return max;
+}
+
+
+Example:
+
+maxSum([2, 1, 5, 1, 3, 2], 3)
+
+OUTPUT:
+9
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🟨 8. arr[right - k] KYUN?
+
+RIGHT = NEW ELEMENT
+
+right - k = WINDOW SE BAHAR JAANE WALA ELEMENT
+
+Example:
+
+K = 3
+right = 3
+
+right - k
+3 - 3
+= 0
+
+arr[0] = 2
+
+So:
+
+OLD SUM - arr[0] + arr[3]
+
+8 - 2 + 1
+= 7
+
+
+🧠 SUPER MANTRA:
+
+arr[right]     → 🟢 NAYA / ENTERING
+arr[right - k] → 🔴 PURANA / LEAVING
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🟨 9. FINAL MEMORY CARD ⭐⭐⭐
+
+FIXED SLIDING WINDOW
+
+"K diya hai?"
+      ↓
+    YES
+      ↓
+WINDOW SIZE = K
+      ↓
+RIGHT → ➡️ ADD NEW
+LEFT  → ➡️ REMOVE OLD
+      ↓
+SIZE ALWAYS = K
+
+
+🔥 GOLDEN LINE:
+
+"EK ELEMENT BAHAR,
+ EK ELEMENT ANDAR,
+ WINDOW KA SIZE SAME."
+
+
+🔥 SUM PROBLEM:
+
+NEW SUM
+= OLD SUM
+- LEAVING
++ ENTERING
+
+
+🔥 CODE:
+
+sum = sum - arr[right - k] + arr[right];
+
+
+🔥 TRIGGER WORDS:
+
+K
+SIZE K
+LENGTH K
+EXACTLY K
+CONSECUTIVE K
+SUBARRAY OF SIZE K
+
+             ↓
+
+      🟨 FIXED WINDOW

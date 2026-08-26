@@ -1,33 +1,31 @@
 // use brute force
-function maxDifference(){
+function maxDifference() {
   let maxDiff = -Infinity;
-  for(let i = 0; i < arr.length; i++){
-    for(let j = i+1; j < arr.length; j++){
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
       let diff = arr[j] - arr[i];
-      maxDiff = Math.max(maxDiff, maxDiff, diff);
+      maxDiff = Math.max(maxDiff, diff);
     }
     return maxDiff;
   }
-
 }
 
 console.log(maxDifference([2, 3, 10, 6, 4, 8, 1])); // 8
-console.log(maxDifference([7, 9, 5, 6, 3, 2]));
-
-
+console.log(maxDifference([7, 9, 5, 6, 3, 2])); // 2
 
 // method 2: Optimized single pass
-function maxDifference(arr){{
-  let min = arr[0];
-  let maxDiff = arr[1]-arr[0];
+function maxDifference(arr) {
+  {
+    let min = arr[0];
+    let maxDiff = arr[1] - arr[0];
 
-  for(let i =1; i < arr.length; i++){
-    let currentDiff = arr[i] - min;
-    maxDiff = Math.max(maxDiff, currentDiff);
-    min = Math.min(min, arr[i]);
+    for (let i = 1; i < arr.length; i++) {
+      let currentDiff = arr[i] - min;
+      maxDiff = Math.max(maxDiff, currentDiff);
+      min = Math.min(min, arr[i]);
+    }
+    return maxDiff;
   }
-  return maxDiff;
-}
 }
 console.log(maxDifference([7, 9, 5, 6, 3, 2])); // 2
 console.log(maxDifference([2, 9, 1, 9, 6, 9, 8])); //  check table
@@ -36,7 +34,6 @@ console.log(maxDifference([2, 9, 1, 9, 6, 9, 8])); //  check table
 // min is updated only from previous elements
 // arr[j] is always compared with earlier values
 // So index of min is always less than j
-
 
 // | i    | arr[i] | min (before) | arr[i] - min | maxDiff | min (after) |
 // | ---- | ------ | ------------ | ------------ | ------- | ----------- |

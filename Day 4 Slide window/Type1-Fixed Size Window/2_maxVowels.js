@@ -3,7 +3,7 @@
 
 
 function maxVowels(s, k) {
-  let vowels = new Set(['a','e','i','o','u']);
+  let vowels = new Set(['a', 'e', 'i', 'o', 'u']);
   let count = 0, max = 0;
 
   for (let i = 0; i < s.length; i++) {
@@ -13,3 +13,40 @@ function maxVowels(s, k) {
   }
   return max;
 }
+
+
+// ==================================
+function maxVowels(s, k) {
+  let vowels = "aeiou";
+  let count = 0;
+  let max = 0;
+
+  // First window
+  for (let i = 0; i < k; i++) {
+    if (vowels.includes(s[i])) {
+      count++;
+    }
+  }
+
+  max = count;
+
+  // Sliding window
+  for (let right = k; right < s.length; right++) {
+
+    // New character enters
+    if (vowels.includes(s[right])) {
+      count++;
+    }
+
+    // Old character leaves
+    if (vowels.includes(s[right - k])) {
+      count--;
+    }
+
+    max = Math.max(max, count);
+  }
+
+  return max;
+}
+
+console.log(maxVowels("abciiidef", 3));

@@ -9,11 +9,9 @@ Output:
     Maximum sum of a contiguous subarray
 ==============================================
 Algorithm
-
             1.Initialize:
                     ==> currentSum = A[0]
                     ==> maxSum = A[0]
-
             2.For i = 1 to n - 1:
                 1.Update current sum:
                     ==> currentSum = max(A[i], currentSum + A[i])

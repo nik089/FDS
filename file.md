@@ -1,20 +1,22 @@
 FRONTEND INTERVIEW PRIORITY (OUT OF YOUR 25)
-* VERY IMPORTANT (Must Master – 80% interview questions)
 
-1.Brute Force Approach
-2.Optimized Single Pass
-3.Hashing (Map / Set)
-4.Sliding Window Technique
-5.Two Pointer Technique
-7.Stack (LIFO)
-6.Sorting + Custom Comparator
-8.Recursion (basic)
-9.Memoization / Caching
-10.Debounce
+- VERY IMPORTANT (Must Master – 80% interview questions)
+
+  1.Brute Force Approach
+  2.Optimized Single Pass
+  3.Hashing (Map / Set)
+  4.Sliding Window Technique
+  5.Two Pointer Technique
+  7.Stack (LIFO)
+  6.Sorting + Custom Comparator
+  8.Recursion (basic)
+  9.Memoization / Caching
+  10.Debounce
+
 11. Throttle
-12.State / Space Optimization
-
-  ==> These alone can clear most frontend interviews.
+    12.State / Space Optimization
+    Polyfills
+    ==> These alone can clear most frontend interviews.
 
 ============================================================
 MEDIUM PRIORITY (Know concept + basic example)
@@ -24,13 +26,9 @@ MEDIUM PRIORITY (Know concept + basic example)
 14.Binary Search
 15.Queue (FIFO)
 
-
 16.Greedy Algorithm
 
 17.In-Place Algorithm
-
-
-
 
 | Technique      | Time Complexity | Space Complexity | Interview Use   |
 | -------------- | --------------- | ---------------- | --------------- |
@@ -41,37 +39,37 @@ MEDIUM PRIORITY (Know concept + basic example)
 | Two Pointer    | O(n)            | O(1)             | Pairs / reverse |
 
 ======================================================================================
-| Problem Type         | Choose         |
+| Problem Type | Choose |
 | -------------------- | -------------- |
-| Reverse / palindrome | Two Pointer    |
-| Pair sum (sorted)    | Two Pointer    |
+| Reverse / palindrome | Two Pointer |
+| Pair sum (sorted) | Two Pointer |
 | Subarray / substring | Sliding Window |
-| Count / frequency    | Hashing        |
-| Negative numbers     | Hashing        |
-| Continuous window    | Sliding Window |
+| Count / frequency | Hashing |
+| Negative numbers | Hashing |
+| Continuous window | Sliding Window |
 
 ==============================================================
 Sliding Window concept
 ==============================================================
-  (2) What is a Continuous Window?
+(2) What is a Continuous Window?
 [1, 2, 3, 4, 5]
-                [1,2,3]  ← window
-                    [2,3,4]
-                        [3,4,5]
+[1,2,3] ← window
+[2,3,4]
+[3,4,5]
 ========================================================
-  (3) Continuous Window in Strings (Substring)
+(3) Continuous Window in Strings (Substring)
 "abcdef"
-        Continuous substrings ✅
-                    "abc"
-                    "bcd"
-                    "cde"
+Continuous substrings ✅
+"abc"
+"bcd"
+"cde"
 
 NOT continuous (X)
-                    "ace"
-                    "adf"
+"ace"
+"adf"
 
-  ==> Substring always means continuous
-  ==> Subsequence means NOT continuous
+==> Substring always means continuous
+==> Subsequence means NOT continuous
 ================================================================
 (4)Why Continuous Window is Important?
 
@@ -82,39 +80,38 @@ NOT continuous (X)
         This is possible only if elements are continuous.
 
 (5)When You SHOULD Use Sliding Window
-    | Keyword     | Meaning            | Example                                  |
-    | ----------- | ------------------ | ---------------------------------------- |
-    | subarray    | continuous array   | [2, 5, 7] is a subarray of [1, 2, 5, 7]   |
-    | substring   | continuous string  | "abc" is a substring of "zabcx"          |
-    | window      | continuous range   | Current window: indexes 2 → 5            |
-    | consecutive | next to each other | 4, 5, 6 are consecutive numbers          |
-    | range       | continuous         | Values between index 1 and 4             |
-
+| Keyword | Meaning | Example |
+| ----------- | ------------------ | ---------------------------------------- |
+| subarray | continuous array | [2, 5, 7] is a subarray of [1, 2, 5, 7] |
+| substring | continuous string | "abc" is a substring of "zabcx" |
+| window | continuous range | Current window: indexes 2 → 5 |
+| consecutive | next to each other | 4, 5, 6 are consecutive numbers |
+| range | continuous | Values between index 1 and 4 |
 
 (7) Continuous Window vs Non-Continuous (Very Important)
 
-| Problem Type    | Continuous? | Technique               | Example                                                      |
-| --------------- | ----------- | ----------------------- | ------------------------------------------------------------ |
-| Subarray        |   (✓)          | Sliding Window          | In [1, 2, 3, 4, 5], the subarray [2, 3, 4]                   |
-| Substring       |   (✓)          | Sliding Window          | In "abracadabra", the substring "bra"                        |
-| Pair sum        |  (X)          | Two Pointer / Hashing   | From [2, 7, 11, 15], pair (2, 7) → target = 9                |
-| Frequency count |  (X)          | Hashing                 | For "aabbc", frequency = { a:2, b:2, c:1 }                   |
-| Reverse array   |  (X)          | Two Pointer             | [1, 2, 3, 4] → reversed → [4, 3, 2, 1]                       |
+| Problem Type    | Continuous? | Technique             | Example                                       |
+| --------------- | ----------- | --------------------- | --------------------------------------------- |
+| Subarray        | (✓)         | Sliding Window        | In [1, 2, 3, 4, 5], the subarray [2, 3, 4]    |
+| Substring       | (✓)         | Sliding Window        | In "abracadabra", the substring "bra"         |
+| Pair sum        | (X)         | Two Pointer / Hashing | From [2, 7, 11, 15], pair (2, 7) → target = 9 |
+| Frequency count | (X)         | Hashing               | For "aabbc", frequency = { a:2, b:2, c:1 }    |
+| Reverse array   | (X)         | Two Pointer           | [1, 2, 3, 4] → reversed → [4, 3, 2, 1]        |
 
 ================================================================================================
 
-| Type   | Input                     | Window Example        | Continuous? | Why                                               |
-|------- |-------------------------- |---------------------- |------------ |--------------------------------------------------|
-| Array  | [2, 1, 5, 1, 3, 2]        | [1, 5, 1]             |   (✓)Yes      | Elements come from indexes 1 → 3 with no gaps    |
-| Array  | [2, 1, 5, 1, 3, 2]        | [2, 5, 3]             |  (X)No       | Skips indexes (0,2,4) — not side-by-side         |
-| Array  | [4, 6, 8, 9]              | [6, 8]                |   (✓)Yes      | Adjacent elements (indexes 1 → 2)                |
-| Array  | [4, 6, 8, 9]              | [4, 8]                |  (X)No       | Jumped from index 0 → 2                          |
-| String | "abcdef"                  | "bcd"                 |   (✓)Yes      | Characters are next to each other                |
-| String | "abcdef"                  | "ace"                 |  (X)No       | Skips characters (b and d)                       |
-| String | "abracadabra"             | "rac"                 |  (X)No       | Not found as a single continuous chunk           |
-| String | "abracadabra"             | "bra"                 |   (✓)Yes      | Appears together exactly as written              |
-===================================================================================================================================
+| Type   | Input              | Window Example | Continuous? | Why                                           |
+| ------ | ------------------ | -------------- | ----------- | --------------------------------------------- |
+| Array  | [2, 1, 5, 1, 3, 2] | [1, 5, 1]      | (✓)Yes      | Elements come from indexes 1 → 3 with no gaps |
+| Array  | [2, 1, 5, 1, 3, 2] | [2, 5, 3]      | (X)No       | Skips indexes (0,2,4) — not side-by-side      |
+| Array  | [4, 6, 8, 9]       | [6, 8]         | (✓)Yes      | Adjacent elements (indexes 1 → 2)             |
+| Array  | [4, 6, 8, 9]       | [4, 8]         | (X)No       | Jumped from index 0 → 2                       |
+| String | "abcdef"           | "bcd"          | (✓)Yes      | Characters are next to each other             |
+| String | "abcdef"           | "ace"          | (X)No       | Skips characters (b and d)                    |
+| String | "abracadabra"      | "rac"          | (X)No       | Not found as a single continuous chunk        |
+| String | "abracadabra"      | "bra"          | (✓)Yes      | Appears together exactly as written           |
 
+===================================================================================================================================
 
 (10) Final Golden Rule (VERY IMPORTANT)
 Sliding Window = Continuous elements only
@@ -127,24 +124,22 @@ Non-continuous = Hashing or Two Pointer
 (X) Ignoring space complexity
 (X) Using sliding window for non-continuous data
 
-
-
 =============================================================================
 Two Pointer vs Hashing — When to Choose Which?
-  (1) Decision Table (WITH EXAMPLES)
+(1) Decision Table (WITH EXAMPLES)
 
 | Situation / Requirement      | Choose Two Pointer | Choose Hashing | **WHY (Clear Reason)**              | **Array Example**    | **String Example**   |
 | ---------------------------- | ------------------ | -------------- | ----------------------------------- | -------------------- | -------------------- |
-| Data is **sorted**           |   (✓)                 |  (X)             | Order helps move pointers logically | Two Sum: `[1,2,3,4]` | N/A                  |
-| Data is **unsorted**         |  (X)                 |   (✓)             | No order → need lookup memory       | Two Sum: `[3,2,4]`   | Anagram check        |
-| Need **O(1) space**          |   (✓)                 |  (X)             | No extra data structure             | Reverse `[1,2,3]`    | Palindrome `"madam"` |
-| Need **fast lookup**         |  (X)                 |   (✓)             | Hash gives O(1) access              | Duplicate `[1,2,1]`  | First repeating char |
-| Need **frequency count**     |  (X)                 |   (✓)             | Must store counts                   | `[1,1,2,2]`          | `"aabbc"`            |
-| Compare from **both ends**   |   (✓)                 |  (X)             | Natural left/right comparison       | Reverse array        | Palindrome           |
-| Elements can be **negative** |  (X)                 |   (✓)             | Pointer logic breaks                | `[1,-1,2]` sum       | N/A                  |
-| Pair / swap / reverse        |   (✓)                 |  (X)             | Direct pointer swap                 | Move zeros           | Reverse string       |
-| Order must stay **same**     |  (X)                 |   (✓)             | Two pointer often mutates           | First duplicate      | First unique char    |
-| Memory is **limited**        |   (✓)                 |  (X)             | Hashing uses extra memory           | Large array          | Large string         |
+| Data is **sorted**           | (✓)                | (X)            | Order helps move pointers logically | Two Sum: `[1,2,3,4]` | N/A                  |
+| Data is **unsorted**         | (X)                | (✓)            | No order → need lookup memory       | Two Sum: `[3,2,4]`   | Anagram check        |
+| Need **O(1) space**          | (✓)                | (X)            | No extra data structure             | Reverse `[1,2,3]`    | Palindrome `"madam"` |
+| Need **fast lookup**         | (X)                | (✓)            | Hash gives O(1) access              | Duplicate `[1,2,1]`  | First repeating char |
+| Need **frequency count**     | (X)                | (✓)            | Must store counts                   | `[1,1,2,2]`          | `"aabbc"`            |
+| Compare from **both ends**   | (✓)                | (X)            | Natural left/right comparison       | Reverse array        | Palindrome           |
+| Elements can be **negative** | (X)                | (✓)            | Pointer logic breaks                | `[1,-1,2]` sum       | N/A                  |
+| Pair / swap / reverse        | (✓)                | (X)            | Direct pointer swap                 | Move zeros           | Reverse string       |
+| Order must stay **same**     | (X)                | (✓)            | Two pointer often mutates           | First duplicate      | First unique char    |
+| Memory is **limited**        | (✓)                | (X)            | Hashing uses extra memory           | Large array          | Large string         |
 
 ====================================================================================================================
 (5)Time & Space Comparison Table
@@ -155,7 +150,7 @@ Two Pointer vs Hashing — When to Choose Which?
 | Hashing     | O(n) | O(n)  | Lookup, frequency, unsorted |
 
 (6) Interview One-Line Rules (MEMORIZE)
-        Sorted data → Two Pointer
-        Unsorted + lookup → Hashing
-        Low memory needed → Two Pointer
-        Need count or frequency → Hashing
+Sorted data → Two Pointer
+Unsorted + lookup → Hashing
+Low memory needed → Two Pointer
+Need count or frequency → Hashing

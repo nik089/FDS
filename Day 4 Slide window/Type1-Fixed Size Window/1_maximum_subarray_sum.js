@@ -120,17 +120,26 @@ x = 5;
 
 // Answer=>Count = 2
 
-function countSubarrays(arr, k, x) {
-  let sum = 0,
-    count = 0;
+function countSum(arr, k, x) {
+  let count = 0;
+  let sum = 0;
+
   for (let i = 0; i < k; i++) {
     sum += arr[i];
   }
+  console.log("Window:", arr.slice(0, k), "Sum:", sum);
   if (sum >= x) count++;
-
   for (let i = k; i < arr.length; i++) {
     sum = sum - arr[i - k] + arr[i];
+    console.log("Window:", arr.slice(i - k + 1, i + 1), "Sum:", sum);
+
     if (sum >= x) count++;
   }
   return count;
 }
+
+let arr1 = [2, 1, 3, 4, 1];
+let k = 2;
+let x = 5;
+console.log(countSum(arr1, k, x)) //
+

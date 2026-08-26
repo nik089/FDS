@@ -12,7 +12,7 @@ function hammingWeight(n){
         n = n & (n-1);
         count ++
     }
-    return count ++
+    return count;
 }
 
 console.log(hammingWeight(11)) // 3

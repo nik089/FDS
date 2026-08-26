@@ -176,4 +176,35 @@ Fixed vs Variable Window (Using Formula);
 
 
 
+================================================
+🟦 2. VARIABLE SIZE WINDOW
+🟦 VARIABLE WINDOW
 
+WINDOW KA SIZE FIXED NAHI HAI
+
+RIGHT → ➡️ EXPAND
+LEFT  → ➡️ SHRINK
+
+Example:
+
+[2, 1, 5, 1, 3, 2]
+ └───────┘
+   WINDOW
+
+Condition OK? → RIGHT badhao ➡️
+
+Condition FAIL?
+→ LEFT badhao ➡️
+→ Window chhoti karo
+
+
+🧠 PEHCHAAN:
+
+"Longest / Shortest"
++
+"Koi condition"
+
+Examples:
+✅ Longest substring without repeating
+✅ Minimum size subarray sum
+✅ Longest subarray with sum ≤ K

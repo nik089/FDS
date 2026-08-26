@@ -8,7 +8,8 @@ function removeDuplicates(s) {
       stack.push(ch);
     }
   }
+
   return stack.join('');
 }
 
-// "abbaca" ==>// "ca"
+console.log(removeDuplicates("abbaca")); // "ca"

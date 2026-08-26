@@ -16,12 +16,12 @@
 // ==================================================================
 // 4. When Do We Use Debounce? (Important)
 // Use Debounce when you care about the FINAL action, not intermediate ones.
-    // Common Frontend Use Cases
-    // Situation	Why Debounce
-    // Search input typing	Call API only after user stops typing
-    // Window resize	Execute logic once after resize ends
-    // Form validation	Validate after user finishes typing
-    // Auto-save	Save after user stops editing//
+// Common Frontend Use Cases
+// Situation	Why Debounce
+// Search input typing	Call API only after user stops typing
+// Window resize	Execute logic once after resize ends
+// Form validation	Validate after user finishes typing
+// Auto-save	Save after user stops editing//
 //  ==========================================================
 // User types "c"     → timer starts
 // User types "a"     → timer resets
@@ -38,7 +38,7 @@
 
 function debounce(func, delay) {
   let timer;
-  return function(){
+  return function () {
     clearTimeout(timer);
     timer = setTimeout(() => {
       func.apply(this, arguments);
@@ -62,9 +62,16 @@ console.log(debouncedSearch());
 // |-----500ms-----| → API Called 
 
 
+// basic debounce
+function debounce(func, delay) {
+  let timer;
 
+  return function () {
+    clearTimeout(timer);
 
-
-
-
+    timer = setTimeout(() => {
+      func();
+    }, delay);
+  };
+}
 

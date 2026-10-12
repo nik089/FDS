@@ -77,3 +77,25 @@ Time: O(1) (average)
     (✓)With hashing:
   You type name → direct access
   That “direct access” is hashing.
+
+
+
+
+
+
+
+====================
+set.add(10);        // Add
+set.has(10);        // Check
+set.delete(10);     // Remove
+set.size;           // Count
+set.clear();        // Remove all
+
+
+==============
+map.set("name", "Nik");  // Add/update
+map.get("name");         // Get value
+map.has("name");         // Check key
+map.delete("name");      // Remove
+map.size;                // Count
+map.clear();             // Remove all

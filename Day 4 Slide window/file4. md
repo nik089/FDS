@@ -129,3 +129,23 @@ Generic Algorithm (Understand This First)
 | Uses window size       | Uses two positions   |
 | Often sum/count/length | Often compare values |
 | Subarray / substring   | Pair / reverse       |
+
+
+
+ARRAY / STRING
+│
+├── PAIR / TWO ELEMENTS
+│   │
+│   ├── SORTED?
+│   │   ├── YES → TWO POINTER
+│   │   └── NO  → HASH MAP / SET
+│   │
+│   └── Goal: Find a pair
+│
+└── SUBARRAY / CONTIGUOUS PART
+    │
+    ├── FIXED / MOVING WINDOW?
+    │   └── YES → SLIDING WINDOW
+    │
+    └── RANGE SUM / SUBARRAY SUM?
+        └── PREFIX SUM

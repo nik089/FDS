@@ -34,7 +34,7 @@
 Total: 27 Topics | 162 LeetCode Problems
 
 ## PHASE 1: BUILD YOUR FOUNDATION
-1. Hashing / Frequency Maps 1, 49, 128, 217, 242, 347   (Done)
+1. Hashing / Frequency Maps 1, 49, 128, 217, 242, 347  ====> (Done)
 2. Two Pointers 11, 15, 16, 18, 42, 167
 3. Sliding Window 3, 76, 209, 424, 567, 904
 4. Prefix Sum 303, 560, 724, 930, 974, 523

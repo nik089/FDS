@@ -66,3 +66,10 @@ Space: O(1) (in-place) or O(n) if extra array used;
 Interview One-Line Answer (MEMORIZE)
   The two pointer technique uses two indexes to traverse data efficiently,
   reducing time complexity and avoiding nested loops, especially useful for arrays and strings.
+
+
+=======================
+Yaad rakhne ka trick:
+Same array + different roles = Slow + Fast
+Same array + opposite ends = Left + Right
+Two different arrays = Two Arrays Two Pointer.

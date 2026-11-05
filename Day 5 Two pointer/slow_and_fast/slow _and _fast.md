@@ -1,3 +1,56 @@
+             ===============================================
+1.🟨 SLOW + FAST
+
+FAST = 🔎 DHUNDHO / SCAN
+SLOW = 📦 RAKHO / BUILD ANSWER
+
+FAST (j) → HAR LOOP ME ++
+SLOW (i) → SIRF USEFUL / NEW ELEMENT MILE TO ++
+
+Example:
+[1, 1, 2, 2, 3]
+ ↑  ↑
+ i  j
+slow fast
+
+
+⭐ IMPORTANT CODE:
+
+if (nums[i] !== nums[j]) {
+    i++;
+    nums[i] = nums[j];
+}
+
+Meaning:
+nums[i] === nums[j]
+→ SAME ❌
+→ i nahi badhega
+→ j aage jayega
+
+nums[i] !== nums[j]
+→ NEW ✅
+→ i++
+→ nums[j] ko nums[i] par RAKH DO
+
+
+🧠 YAAD:
+"FAST DHUNDHE → SLOW RAKHE"
+
+🔥 POINTER MOVEMENT:
+j → HAR BAAR ++
+i → NEW/USEFUL MILE TAB ++
+
+
+
+Trigger:
+✅ Remove Duplicates
+✅ Move Zeroes
+✅ Remove Element
+✅ Partition
+🧠 Trigger:(when used)
+"KEEP / REMOVE / MOVE / FILTER"
+
+=======================================
              SLOW & FAST
                   │
         ┌─────────┼─────────┐

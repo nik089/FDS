@@ -36,13 +36,13 @@ Total: 27 Topics | 162 LeetCode Problems
 ## PHASE 1: BUILD YOUR FOUNDATION
 1. Hashing / Frequency Maps 1, 49, 128, 217, 242, 347  ====> (Done)
 2. Two Pointers 11, 15, 16, 18, 42, 167
+2. Fast / Slow Pointers 141, 142, 234
 3. Sliding Window 3, 76, 209, 424, 567, 904
 4. Prefix Sum 303, 560, 724, 930, 974, 523
 5. Binary Search on Sorted Data 33, 34, 35, 153, 162, 704 
 
 ## PHASE 2: CORE DATA STRUCTURES
 6. Linked List Manipulation 21, 24, 92, 19, 876, 160
-7. Fast / Slow Pointers 141, 142, 234
 8. Tree DFS 104, 226, 112, 543, 113, 124
 9. Tree BFS 102, 103, 199, 637, 515, 116
 10. Binary Search Tree 700, 230, 235, 98, 99, 450
